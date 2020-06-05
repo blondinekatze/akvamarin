@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" class="compensate-for-scrollbar">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{title}}</title>
+
+    <meta name="theme-color" content="#2f3035">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="assets/css/vendor.css?ts={{time}}">
+    <link rel="stylesheet" href="assets/css/main.css?ts={{time}}">
+    <link rel="stylesheet" href="assets/css/media.css?ts={{time}}">
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16"/>
+
+</head>
+
+<body class="g-body{{#if bodyClass}} {{bodyClass}}{{/if}}">
+<div class="l-wrapper">
+
+    {{> includes/header }}
+
+    {{#> middle-block}}
+        <div class="l-content">
+            {{> content}}
+        </div>
+    {{/middle-block}}
+
+    {{> includes/footer }}
+
+    {{> popups/order-call }}
+    {{> popups/lovec }}
+
+</div>
+
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/main.js?ts={{time}}"></script>
+{{#> scripts-block}} {{/scripts-block}}
+
+</body>
+
+</html>

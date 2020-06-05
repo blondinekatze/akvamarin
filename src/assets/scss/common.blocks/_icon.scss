@@ -1,0 +1,18 @@
+@import "../variables";
+@import "../mixins";
+@import "../sprites/svg-icons";
+
+.b-icon {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+
+    fill: currentColor;
+
+    @each $name, $icon in $svg-icons {
+        &.-#{$name} {
+            @include sprite($icon);
+        }
+    }
+
+}

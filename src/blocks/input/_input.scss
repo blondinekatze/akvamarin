@@ -1,0 +1,57 @@
+$block: ".b-input";
+
+#{$block} {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    font: 500 16px/1.23 $font-main;
+    transition: border-color .2s linear;
+
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    &__box {
+        display: block;
+        position: relative;
+        user-select: none;
+    }
+
+    &__control {
+        @include placeholder {
+            color: rgba($color-main,.5);
+            font-size: inherit;
+        }
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        height: 48px;
+        padding: 0 15px;
+        font: inherit;
+        line-height: inherit;
+        background: rgba(227, 229, 232, 0.4);
+        border: 1px solid #E3E5E8;
+        border-radius: 4px;
+        outline: none;
+        transition: border-color .2s linear;
+
+        -webkit-appearance: none;
+        &[disabled] {
+            opacity: .7;
+        }
+        &:focus {
+            border-color: $color-active;
+            background: transparent;
+
+        }
+        &.error {
+            border-color: #d81f1f!important;
+        }
+    }
+    &.-error {
+        #{$block} {
+            &__control {
+                border-color: #d81f1f!important;
+            }
+        }
+    }
+}

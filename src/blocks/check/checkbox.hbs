@@ -1,0 +1,12 @@
+<label class="b-checkbox{{#if checked}} -checked{{/if}}{{#if classes}} {{classes}}{{/if}}" for="{{group-name}}" {{{attr}}}>
+    <span class="b-checkbox__box">
+        <input class="b-checkbox__control" type="checkbox" id="{{group-name}}" {{#if value}}value="{{value}}"{{/if}} {{#if checked}}checked{{/if}}>
+    </span>
+    {{#if label}}<span class="b-checkbox__txt">{{label}}{{#if span}} <span>{{span}}</span>{{/if}}</span>{{/if}}
+    {{#if agreement}}
+        <span class="b-checkbox__txt">
+            Согласен(на) с <a href="#popup" class="js-fancybox">правилами пользовательского соглашения</a>
+        </span>
+    {{/if}}
+
+</label>

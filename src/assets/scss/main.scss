@@ -1,0 +1,9 @@
+@import "variables";
+@import "mixins";
+
+@import "common";
+@import "fonts";
+
+@import "../../blocks/**/*.scss";
+@import "common.blocks/**/*.scss";
+@import "pages.blocks/**/*.scss";

@@ -1,0 +1,16 @@
+.b-form {
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        .b-form {
+            &__item {
+                width: 48%;
+                margin-top: 0;
+            }
+        }
+    }
+    &__item {
+        margin-top: 8px;
+    }
+
+}

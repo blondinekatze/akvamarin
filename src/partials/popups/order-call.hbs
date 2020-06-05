@@ -1,0 +1,25 @@
+<div class="l-popup " id="popup">
+    <div class="b-title">Запишитесь на бесплатную консультацию</div>
+    <div class="l-popup__txt">
+        Наш менеджер перезвонит вам в течение нескольких минут
+    </div>
+    <form action="#" class="b-form">
+        <div class="b-form__list">
+            <div class="b-form__item">
+                {{> input/input placeholder="Как вас зовут?" classes="-error"}}
+            </div>
+            <div class="b-form__item">
+                {{> input/input
+                    placeholder="Номер телефона"
+                    attr='data-inputmask-mask="+7 (999) 999-99-99"'
+                }}
+            </div>
+            <div class="b-form__item -btn">
+                <button class="b-button">Оставить заявку</button>
+            </div>
+            <div class="b-form__item">
+                {{> check/checkbox agreement="1" group-name="bottom"}}
+            </div>
+        </div>
+    </form>
+</div>

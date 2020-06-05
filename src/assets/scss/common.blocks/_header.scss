@@ -1,0 +1,21 @@
+.l-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba($color-main, .3);
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: $width-content;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+
+}

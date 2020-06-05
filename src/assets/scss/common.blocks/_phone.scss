@@ -1,0 +1,11 @@
+.b-phone {
+    display: block;
+    color: $color-main;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color .2s linear;
+    white-space: nowrap;
+    &:hover {
+        color: $color-active;
+    }
+}

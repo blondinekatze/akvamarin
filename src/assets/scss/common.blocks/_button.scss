@@ -1,0 +1,32 @@
+.b-button {
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    padding: 0 25px;
+    margin: 0;
+    color: #fff;
+    font: 400 14px/48px $font-main;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background: $color-active;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    cursor: pointer;
+    user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+
+    transition: all .2s;
+
+    &:visited {
+        color: #fff;
+    }
+    &:hover {
+        background: #414C57;
+    }
+
+}

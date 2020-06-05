@@ -1,0 +1,325 @@
+{{#> layouts/base title="Главная страница" bodyClass="-main-page"}}
+    {{#*inline "content"}}
+        <div class="b-main-info">
+            <div class="b-main-info__video js-video-main lazy" data-bg="url(images/main.jpg)">
+                <iframe width="1920" height="1080" id="video"
+                        data-src="https://www.youtube.com/embed/5amS2YmbikY"
+                        data-params="?autoplay=1&amp;loop=0&amp;mute=1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media;"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="l-content__inner">
+                <div class="b-main-page-wrap">
+                    <div class="b-main-info__title">
+                        Ассоциация строительных организаций
+                        Новосибирской области
+                    </div>
+                    <div class="b-main-info__txt">
+                        Саморегулируемая организация СРО-С-284-21062017
+                    </div>
+                    <div class="b-main-info__wrap">
+                        <div class="b-main-grid">
+                            <div class="b-main-grid__list">
+                                <div class="b-main-grid__item -white">
+                                    <div class="b-main-grid__content">
+                                        <div class="b-main-grid__title">
+                                            Реестр членов
+                                            АСОНО
+                                        </div>
+                                        <a href="#" class="b-main-grid__link">Посмотреть</a>
+                                        <div class="b-main-grid__partner">
+                                            <span>1456</span> <br/>
+                                            Участников
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-main-grid__item -gradient-green">
+                                    <div class="b-main-grid__content">
+                                        <div class="b-main-grid__title">
+                                            Вступить в
+                                            ассоциацию
+                                        </div>
+
+                                        <a href="#popup" class="b-main-grid__link js-fancybox">Подать документы</a>
+                                        <a href="#" class="b-main-grid__plus">
+                                            {{> icon/icon name="plus" }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="b-main-grid__list -mt0">
+                                <div class="b-main-grid__item -gray-dark -w2">
+                                    <div class="b-main-grid__wrap">
+                                        <div class="b-main-grid__title">
+                                            Национальный реестр специалистов (НРС)
+                                        </div>
+                                        <div class="b-main-grid__lbl">
+                                            <div class="b-main-grid__lbl-count">
+                                                378
+                                            </div>
+                                            <div class="b-main-grid__txt">
+                                                Специалистов
+                                                добавлено
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-news">
+                            <div class="b-news__list">
+                                <div class="b-news__item">
+                                    <div class="b-news__slider js-slider-news-anons">
+                                        <div class="swiper-container" data-carousel>
+                                            <div class="swiper-wrapper">
+                                                {{#times 5}}
+                                                    <div class="swiper-slide" data-slide>
+                                                        {{> blocks/news-card-v3 type="Анонсы" classes="-anons -slide-img"}}
+                                                    </div>
+                                                {{/times}}
+                                            </div>
+                                        </div>
+                                        <div class="swiper-container__controls">
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-news__item">
+                                    <div class="b-news__slider js-slider-news-anons">
+                                        <div class="swiper-container" data-carousel>
+                                            <div class="swiper-wrapper">
+                                                {{#times 5}}
+                                                    <div class="swiper-slide" data-slide>
+                                                        {{> blocks/news-card-v3 type="Главные новости" classes="-scale-img"}}
+                                                    </div>
+                                                {{/times}}
+                                            </div>
+                                        </div>
+                                        <div class="swiper-container__controls">
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <a href="#news" class="b-btn-down js-scroll-to">
+                {{> icon/icon name="arrow-down"}}
+            </a>
+        </div>
+        <div class="l-content__inner">
+            <div class="b-main-page-wrap">
+                <div class="b-main-grid -full">
+                    <div class="b-main-grid__list">
+                        <div class="b-main-grid__item -gradient-blue">
+                            <div class="b-main-grid__content">
+                                <div class="b-main-grid__title">
+                                    Страхование
+                                </div>
+                                <div class="b-main-grid__value" data-txt="200 млн">
+                                    200 млн
+                                </div>
+                                <div class="b-main-grid__txt">
+                                    Ответственность<br/>
+                                    членов СРО застрахованна<br/>
+                                    на 200 000 000 руб
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-main-grid__inner">
+                            <div class="b-main-grid__item -white">
+                                <div class="b-main-grid__content">
+                                    <div class="b-main-grid__title">
+                                        Повышение<br/>
+                                        квалификации
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="b-main-grid__item -gray">
+                                <div class="b-main-grid__content">
+                                    <div class="b-main-grid__title">
+                                        Центр <br/>
+                                        испытаний
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="b-main-grid__item -w2 -gradient-gray">
+                            <div class="b-main-grid__content">
+                                <div class="b-main-grid__title">
+                                    Строительные ведомости <br/>
+                                    за сентябрь №9 (521)
+                                </div>
+                                <div class="b-main-grid__date">
+                                    20.08.2019
+                                </div>
+                            </div>
+
+                            <div class="b-main-grid__bg-wrap">
+                                <img data-src="images/grid-1.png" alt="" class="b-main-grid__bg lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="b-news -with-bg" id="news">
+                    <div class="b-news__top">
+                        <div class="b-title">
+                            Важные новости
+                        </div>
+                        {{> blocks/social-menu s-title="АСОНО в соц. сетях:"}}
+                    </div>
+                    <div class="swiper-container js-news-mobile">
+                            <div class="swiper-wrapper b-news__list">
+                                {{#times 3}}
+                                    <div class="b-news__item swiper-slide">
+                                        {{> blocks/news-card-v3 classes="-slide-img"}}
+                                    </div>
+                                {{/times}}
+                                <div class="b-news__item -mobile-none swiper-slide">
+                                    <div class="b-news-info -orange">
+                                        <div class="b-news-info__content">
+                                            <div class="b-news-info__value">
+                                                24ч
+                                            </div>
+                                            <div class="b-news-info__txt">
+                                                Вступите в АСОНО за 24 часа
+                                            </div>
+                                            <a href="#" class="b-news-info__link">Подать документы</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-news__item -mobile-none swiper-slide">
+                                    <div class="b-news__slider js-slider-news">
+                                        <div class="swiper-container" data-carousel>
+                                            <div class="swiper-wrapper">
+                                                {{#times 5}}
+                                                    <div class="swiper-slide" data-slide>
+                                                        <div class="b-news-info -gray">
+                                                            <div class="b-news-info__content">
+                                                                <div class="b-news-info__img-wrap">
+                                                                    <img src="images/news-info.png" alt=""
+                                                                         class="b-news-info__img">
+                                                                </div>
+                                                                <div class="b-news-info__txt">
+                                                                    Перед заключением контракта вы сможете бесплатно
+                                                                    проконсультироваться с нашими юристами по всем вопросам
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {{/times}}
+                                            </div>
+                                        </div>
+                                        <div class="swiper-container__controls">
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-news__item swiper-slide">
+                                    {{> blocks/news-card-v3 classes="-scale-img"}}
+                                </div>
+                                <div class="b-news__item -w2 swiper-slide">
+                                    {{> blocks/news-card-v3 classes="-scale-img"}}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="b-news__bottom">
+                        <a href="#" class="b-button -secondary">Больше материалов</a>
+                    </div>
+                </div>
+                <div class="b-leaders">
+                    <div class="b-leaders__content">
+                        <div class="b-title">
+                            Вступить в команду к лидерам
+                            строительного рынка
+                        </div>
+                        <div class="b-leaders__txt">
+                            Перед заключением контракта вы сможете бесплатно проконсультироваться с нашими юристами по
+                            всем вопросам
+                        </div>
+                        <div class="b-leaders__btn">
+                            <a href="#" class="b-button">Подать документы</a>
+                        </div>
+                    </div>
+                    <div class="b-leaders__slider js-slider">
+                        <div class="swiper-container" data-carousel>
+                            <div class="swiper-wrapper">
+                                {{#times 5}}
+                                    <div class="swiper-slide" data-slide>
+                                        <div class="b-leaders__img-wrap -top">
+                                            <img src="images/leaders-1.png" alt="">
+                                        </div>
+                                        <div class="b-leaders__img-wrap">
+                                            <img src="images/leaders-2.png" alt="">
+                                        </div>
+                                        <div class="b-leaders__img-wrap -bottom">
+                                            <img src="images/leaders-1.png" alt="">
+                                        </div>
+                                    </div>
+                                {{/times}}
+                            </div>
+                        </div>
+                        <div class="swiper-nav -disabled" data-nav>
+                            <div class="swiper-nav__prev">
+                                {{> icon/icon name="arrow-left"}}
+                            </div>
+                            <div class="swiper-nav__next">
+                                {{> icon/icon name="arrow-right"}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script>
+
+            new Neko.SliderLeaders({
+                selector: '.js-slider'
+            });
+
+            new Neko.SliderMain({
+                selector: '.js-slider-news'
+            });
+
+            new Neko.SliderMain({
+                selector: '.js-slider-news-main'
+            });
+
+            new Neko.SliderMain({
+                selector: '.js-slider-news-anons'
+            });
+            (function ($) {
+                "use strict";
+                $(function () {
+                    /*   if ($('.js-video-main').length > 0) {
+                           var frameVideo = $('#video'),
+                               src = frameVideo.data('src'),
+                               paramsVideo = frameVideo.data('params');
+                           setTimeout(function () {
+                               frameVideo.attr('src', src + paramsVideo);
+                           }, 1000);
+                       }*/
+                });
+            })(jQuery);
+
+            new Neko.NewsMobile({
+                selector: '.js-news-mobile'
+            });
+
+
+        </script>
+    {{/inline}}
+
+
+{{/layouts/base}}

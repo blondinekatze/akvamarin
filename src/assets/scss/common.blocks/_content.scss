@@ -1,0 +1,21 @@
+.l-content {
+    flex: 1 0 auto;
+    padding-top: 91px;
+
+    &__inner {
+        max-width: $width-content;
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 100%;
+    }
+    &__item {
+        margin-bottom: 40px;
+
+    }
+    @media all and (max-width: 1200px) {
+        padding-top: 77px;
+    }
+    @media all and (max-width: $width-tablet) {
+        padding-top: 70px;
+    }
+}

@@ -1,0 +1,56 @@
+.l-popup {
+    display: none;
+    overflow: visible;
+    width: 100%;
+    max-width: 460px;
+    padding: 60px;
+    border-radius: 5px;
+    &__txt {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+    .b-form {
+        margin-top: 25px;
+    }
+    .b-button {
+        width: 100%;
+    }
+    .fancybox-close-small {
+        padding: 5px;
+        right: -15px;
+        top: -50px;
+        color: #fff;
+        &:hover {
+            color: $color-active;
+        }
+    }
+
+    &.-lovec {
+        max-width: 550px;
+    }
+    &__img-wrap {
+        margin: -5px 0 -5px -5px;
+        border-radius: 10px 0 0 10px;
+        background-position: 100% 0;
+        background-size: cover;
+        width: 160px;
+        flex-shrink: 0;
+    }
+}
+
+.fancybox-container {
+    font-family: $font-main;
+}
+
+.ouibounce-modal {
+    z-index: 1000;
+    .l-popup {
+        display: block;
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

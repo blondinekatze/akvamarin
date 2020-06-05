@@ -1,0 +1,13 @@
+.b-txt {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+
+    @media all and (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    img {
+        max-width: 100%;
+    }
+}

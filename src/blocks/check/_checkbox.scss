@@ -1,0 +1,78 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+$block: ".b-checkbox";
+
+#{$block} {
+    display: flex;
+    position: relative;
+    font-size: 0;
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    &.error {
+        border-color: #d81f1f;
+    }
+    &__box {
+        display: inline-block;
+        position: relative;
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        margin-right: 7px;
+        border: 1px solid #E3E5E8;
+        border-radius: 2px;
+        background: #F4F5F6;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 3px;
+            left: 2px;
+            width: 10px;
+            height: 5px;
+            border-top: 2px solid transparent;
+            border-right: 2px solid transparent;
+            transform: rotate(135deg);
+
+            -webkit-transform: rotate(135deg);
+        }
+
+        &.error {
+            border-color: #d81f1f;
+        }
+    }
+
+    &__txt {
+        display: inline-block;
+        color: rgba($color-main,.5);
+        font-size: 14px;
+        line-height: 14px;
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+
+    &__control {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+    }
+
+    &.-checked {
+        #{$block} {
+            &__box {
+                &:after {
+                    border-color: $color-main;
+                }
+            }
+        }
+    }
+}

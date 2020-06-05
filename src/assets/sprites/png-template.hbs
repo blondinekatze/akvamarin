@@ -1,0 +1,15 @@
+{{#sprites}}
+$png-{{../spritesheet_info.name}}-{{name}}: (
+    '{{escaped_image}}',
+    {{px.width}},
+    {{px.height}},
+    {{px.offset_x}},
+    {{px.offset_y}}
+);
+{{/sprites}}
+
+$png-{{spritesheet_info.name}}: (
+{{#sprites}}
+    {{name}}: $png-{{../spritesheet_info.name}}-{{name}},
+{{/sprites}}
+);

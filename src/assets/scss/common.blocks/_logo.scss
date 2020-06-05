@@ -1,0 +1,11 @@
+.b-logo {
+    display: block;
+    width: 248px;
+    flex-shrink: 0;
+    font-size: 0;
+
+    &__img {
+        width: 100%;
+    }
+
+}

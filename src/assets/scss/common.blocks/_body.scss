@@ -1,0 +1,50 @@
+.g-body {
+    font: 500 normal 18px/1.7 $font-main;
+    width: 100%;
+    min-width: 390px;
+    height: 100%;
+    color: $color-main;
+    background: #EBEDF0;
+    &.-register-page {
+        .l-header {
+            box-shadow: none;
+        }
+        .b-top-page {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10px;
+            padding-top: 0;
+            .b-title {
+                display: none;
+            }
+        }
+        .b-menu-collapsed {
+            order: -1;
+            margin-top: 0;
+            margin-bottom: 25px;
+            &:before {
+                background: #EBEDF0;
+                box-shadow: 0 3px 6px rgba($color-main,.3);
+            }
+            &__item {
+                color: $color-main;
+                &.-is-active {
+                    color: #00AEE6;
+                }
+            }
+            &__icon {
+                color: $color-main;
+
+            }
+        }
+    }
+    &.-main-page {
+        .b-title {
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+    @media all and (max-width: 980px) {
+        font-size: 14px;
+    }
+}

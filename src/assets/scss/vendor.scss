@@ -1,0 +1,11 @@
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+//=require normalize.css/normalize.css
+//=require @fancyapps/fancybox/dist/jquery.fancybox.css
+//=require swiper/css/swiper.css

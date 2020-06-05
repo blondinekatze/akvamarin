@@ -1,0 +1,32 @@
+<div class="b-menu{{#if classes}} {{classes}}{{/if}}">
+    <div class="b-menu__list">
+        {{#each items}}
+            <div class="b-menu__item{{#if active}} -is-active{{/if}}{{#if classes}} {{classes}}{{/if}}{{#if items}} -dropdown{{/if}}">
+                <a href="#" class="b-menu__link">
+                    {{name}}
+                    {{#if items}}
+                        <span class="b-menu__icon">
+                            {{> icon/icon name="menu-icon"}}
+                        </span>
+                    {{/if}}
+                </a>
+                {{#if items}}
+                    <div class="b-menu__dropdown">
+                        <div class="b-menu-dropdown">
+                            <div class="b-menu-dropdown__list">
+                                {{#each items}}
+                                    <div class="b-menu-dropdown__item{{#if active}} -is-active{{/if}}">
+                                        <a href="#" class="b-menu-dropdown__link">{{name}}</a>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                {{/if}}
+            </div>
+        {{/each}}
+    </div>
+    {{#if sidebar}}
+        <div class="m-sidebar-bg" data-controls></div>
+    {{/if}}
+</div>
