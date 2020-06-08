@@ -3,8 +3,8 @@
 @import "../sprites/svg-icons";
 
 .b-icon {
-    position: relative;
     display: inline-block;
+    position: relative;
     flex-shrink: 0;
 
     fill: currentColor;
@@ -33,5 +33,13 @@
     &.-tw {
         width: 30px;
         height: 30px;
+    }
+    &.-arrow-down {
+        width: 40px;
+        height: 22px;
+    }
+    &.-arrow-slider {
+        width: 29px;
+        height: 17px;
     }
 }

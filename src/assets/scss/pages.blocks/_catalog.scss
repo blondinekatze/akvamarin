@@ -1,0 +1,14 @@
+.b-catalog {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: -30px;
+    }
+    &__bottom {
+        text-align: center;
+        margin-top: 55px;
+
+    }
+}

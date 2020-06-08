@@ -1,12 +1,148 @@
 {{#> layouts/base title="Главная страница" bodyClass="-main-page"}}
     {{#*inline "content"}}
-        <div class="l-content__inner">
+        <div class="l-content__item">
+            <div class="b-slider js-slider">
+                <div class="b-slider__sidebar">
+                    <div class="b-slider__sidebar-txt">Нижний Новгород, ул. Петрова, д 23</div>
+                    {{> icon/icon name="arrow-down"}}
+                </div>
+                <div class="b-slider__carousel">
+                    <div class="swiper-container" data-carousel>
+                        <div class="swiper-wrapper">
+                            {{#times 3}}
+                                <div class="swiper-slide" data-slide
+                                     style="background-image: url(images/slider-bg.jpg)">
+                                    <div class="l-content__inner">
+                                        <div class="swiper-slide__content">
+                                            <div class="swiper-slide__subtitle">
+                                                Поможем осуществить мечту
+                                            </div>
+                                            <div class="swiper-slide__title">
+                                                Ваша собственная квартира
+                                                на&nbsp;берегу Оки
+                                            </div>
+                                            <div class="swiper-slide__txt">
+                                                ЖК «Аквамарин» расположен на берегу Оки и досупен для каждого.<br/>>Мы
+                                                поможем с выбором лучшего для Вас варианта<br/>
+                                                и проконсультируем по всем вопросам
+                                            </div>
+                                            <div class="swiper-slide__btn">
+                                                <a href="#popup" class="b-button js-fancybox">Заказать консультацию</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/times}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="b-slider__bottom">
+                    <div class="l-content__inner">
+                        {{> blocks/social-menu }}
+                        <div class="b-slider__nav">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-nav -disabled" data-nav>
+                                <div class="swiper-nav__prev">
+                                </div>
+                                <div class="swiper-nav__next">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
+
+        <div class="l-content__inner">
+            <div class="l-content__item">
+                <div class="b-title">
+                    <div class="b-title__wrap">
+                        Выберите свою квартиру
+                    </div>
+                </div>
+
+                <div class="b-tabs js-tabs">
+                    <div class="b-tabs__list">
+                        {{#each pages.main.tabs}}
+                            <div class="b-tabs__item{{#if classes}} {{classes}}{{/if}}" data-tabs-property="{{property}}">
+                                {{name}}
+                            </div>
+                        {{/each}}
+                    </div>
+                    <div class="b-catalog" data-catalog>
+                        <div class="b-catalog__list">
+                            {{#each pages.main.card}}
+                                <div class="b-card" data-count="{{property}}">
+                                    <div class="b-card__gallery js-card-gallery-{{src}}">
+
+                                        <div class="swiper-container" data-carousel>
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide" data-slide
+                                                     style="background-image: url(images/card-{{src}}.jpg)">
+                                                </div>
+                                                <div class="swiper-slide" data-slide
+                                                     style="background-image: url(images/card-{{src}}.jpg)">
+                                                </div>
+                                                <div class="swiper-slide" data-slide
+                                                     style="background-image: url(images/card-{{src}}.jpg)">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-nav -disabled" data-nav>
+                                                <div class="swiper-nav__prev">
+                                                    <div class="swiper-nav__icon">
+                                                        {{> icon/icon name="arrow-slider"}}
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-nav__next">
+                                                    <div class="swiper-nav__icon">
+                                                        {{> icon/icon name="arrow-slider"}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="b-card__content">
+                                        <div class="b-card__name">{{name}} м²</div>
+                                        <div class="b-card__price">{{price}} ₽</div>
+                                    </div>
+                                </div>
+                            {{/each}}
+
+                        </div>
+                        <div class="b-catalog__bottom">
+                            <a href="#" class="b-button -bordered">Смотреть еще</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
     {{/inline}}
 
     {{#*inline "scripts-block"}}
         <script>
-
+            new Neko.SliderMain({
+                selector: '.js-slider',
+            });
+            new Neko.SliderCardGallery({
+                selector: '.js-card-gallery-0',
+            });
+            new Neko.SliderCardGallery({
+                selector: '.js-card-gallery-1',
+            });
+            new Neko.SliderCardGallery({
+                selector: '.js-card-gallery-2',
+            });
+            new Neko.SliderCardGallery({
+                selector: '.js-card-gallery-3',
+            });
 
         </script>
     {{/inline}}

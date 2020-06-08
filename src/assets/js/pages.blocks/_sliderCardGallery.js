@@ -5,8 +5,6 @@
 
         this.container = $(options.selector);
         this.carousel = this.container.find('[data-carousel]');
-        this.autoplay = options.autoplay;
-        this.pagination = options.pagination;
         this.init();
     };
 
@@ -16,8 +14,7 @@
 
             if (this.container.length > 0) {
 
-                var pagination = this.container.find('.swiper-pagination'),
-                    navigation = this.container.find('[data-nav]'),
+                var navigation = this.container.find('[data-nav]'),
                     navigationPrev = navigation.find('.swiper-nav__prev'),
                     navigationNext = navigation.find('.swiper-nav__next'),
                     countSlide = this.carousel.find('[data-slide]').length;
@@ -31,21 +28,6 @@
                     loop: true,
                     lazy: true,
                     allowTouchMove: (countSlide > 1),
-                    pagination: {
-                        el: pagination,
-                        clickable: true,
-                        type: 'fraction',
-                        formatFractionCurrent: function(number) {
-                            return number < 10 ? '0' + number : number;
-                        },
-                        formatFractionTotal: function(number) {
-                            return number < 10 ? '0' + number : number;
-                        }
-                    },
-                    autoplay: this.autoplay ?{
-                        delay: this.autoplay,
-                        disableOnInteraction: false,
-                    } : undefined,
                     navigation: {
                         nextEl: navigationNext,
                         prevEl: navigationPrev,
@@ -59,6 +41,6 @@
         window.Neko = {};
     }
 
-    window.Neko.SliderMain = Slider;
+    window.Neko.SliderCardGallery = Slider;
 
 })(jQuery);

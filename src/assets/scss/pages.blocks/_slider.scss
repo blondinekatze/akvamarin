@@ -1,0 +1,195 @@
+.b-slider {
+    display: flex;
+    position: relative;
+    &__sidebar {
+        width: 110px;
+        background-color: #fff;
+        flex-shrink: 0;
+        padding-bottom: 65px;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        justify-content: center;
+
+        &-txt {
+            font-size: 17px;
+            position: absolute;
+            line-height: 23px;
+            transform: rotate(-90deg);
+            white-space: nowrap;
+            top: 0;
+            right: 45px;
+            transform-origin: bottom right;
+        }
+    }
+
+
+
+    .swiper-slide {
+        background-size: cover;
+        background-position: 50% 50%;
+        height: calc(100vh - 119px);
+        color: #fff;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__content {
+            max-width: 700px;
+        }
+
+        &__subtitle {
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            font-weight: 900;
+            font-size: 45px;
+            line-height: 48px;
+            margin-bottom: 25px;
+        }
+
+        &__txt {
+            line-height: 26px;
+        }
+
+        &__btn {
+            margin-top: 50px;
+        }
+
+        .l-content__inner {
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        bottom: 65px;
+        right: 30px;
+        color: #fff;
+        visibility: visible;
+
+        white-space: nowrap;
+        .swiper-pagination {
+            position: relative;
+            bottom: auto;
+            line-height: 48px;
+            font-size: 35px;
+            padding: 0 10px;
+            &-current {
+                font-size: 50px;
+            }
+            &-total {
+            }
+        }
+        .swiper-nav {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            visibility: hidden;
+            left: 0;
+            right: 0;
+            z-index: 1;
+
+            &__next, &__prev {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 30px;
+                visibility: visible;
+            }
+            &__next {
+                right: 100%;
+                &:before {
+                    content:'';
+                    position: absolute;
+                    left: 0;
+                    width: 20px;
+                    height: 2px;
+                    background-color: #fff;
+                    top: 50%;
+                }
+                &:after {
+                    content:'';
+                    position: absolute;
+                    left: 0;
+                    width: 2px;
+                    height: 20px;
+                    background-color: #fff;
+                    top: 50%;
+                    margin: -9px 0 0 9px;
+                }
+
+            }
+            &__prev {
+                left: 100%;
+                &:before {
+                    content:'';
+                    position: absolute;
+                    right: 0;
+                    width: 20px;
+                    height: 2px;
+                    background-color: #fff;
+                    top: 50%;
+                }
+            }
+        }
+    }
+
+    .swiper-nav {
+        display: flex;
+        &.-disabled {
+            display: none;
+        }
+    }
+
+    .swiper-pagination {
+
+    }
+
+
+
+    &__carousel {
+        width: 100%;
+        .l-content__inner {
+            transform: translateX(-130px);
+            z-index: 1;
+            position: relative;
+        }
+    }
+    &__bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        visibility: hidden;
+
+        .l-content__inner {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+        .b-social-menu {
+            color: #fff;
+            right: 15px;
+            position: absolute;
+            z-index: 10;
+            visibility: visible;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &__list {
+                margin-top: -20px;
+                flex-direction: column;
+            }
+
+            &__item {
+                margin-top: 20px;
+            }
+        }
+
+    }
+}
