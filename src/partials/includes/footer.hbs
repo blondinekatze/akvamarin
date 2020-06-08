@@ -1,10 +1,46 @@
 <div class="l-footer">
 
-    <div class="l-footer__main">
+    <div class="l-footer__top">
         <div class="l-footer__wrap">
+            <a href="#" class="b-logo">
+                <span class="b-logo__img-wrap">
+                    <img src="assets/images/logo--white.svg" alt="" class="b-logo__img">
+                </span>
+                <span class="b-logo__txt">Жилой комплекс Аквамарин</span>
+            </a>
+            {{> menu/menu items=common.footer.menu }}
+
+            <div class="l-footer__inner">
+                <a href="tel:228" class="l-header__phone">(831) 202-02-12</a>
+                <a href="#popup" class="l-header__link js-fancybox">Заказать звонок</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="l-footer__middle">
+        <div class="l-footer__wrap">
+            {{#each common.footer.info}}
+                <div class="l-footer__item{{#if classes}} {{classes}}{{/if}}">
+                    <div class="l-footer__subtitle">{{subtitle}}</div>
+                    {{#if txt}}
+                        <div class="l-footer__txt">{{txt}}</div>{{/if}}
+                    {{#if txt2}}
+                        <div class="l-footer__txt">
+                            Пн-Пт: с 8:00 до 21:00 <br/>
+                            Сб-Вс: с 10:00 до 21:00
+                        </div>
+                    {{/if}}
+
+                </div>
+            {{/each}}
 
         </div>
-
     </div>
 
+    <div class="l-footer__bottom">
+        <div class="l-footer__wrap">
+            {{> blocks/social-menu }}
+            <div class="l-footer__txt">Все права защищены©</div>
+        </div>
+    </div>
 </div>

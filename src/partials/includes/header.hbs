@@ -2,18 +2,19 @@
     <div class="l-header__main">
         <div class="l-header__wrap">
             <a href="#" class="b-logo">
-                <img src="assets/images/logo.svg" alt="" class="b-logo__img">
+                <span class="b-logo__img-wrap">
+                    <img src="assets/images/logo.svg" alt="" class="b-logo__img">
+                </span>
+                <span class="b-logo__txt">Жилой комплекс Аквамарин</span>
             </a>
             <div class="l-header__mobile">
                 {{> menu/menu items=common.header.menu }}
-                <a href="tel:228" class="l-header__phone">8 383 304-99-88</a>
-
-                <div class="l-header__controls">
-                    <a href="#" class="l-header__control -personal" data-mobile-name="Личный кабинет">
-                        {{> icon/icon name="personal"}}
-                    </a>
-                </div>
                 <div class="l-header__mobile-bg" data-show-sidebar></div>
+            </div>
+            <div class="l-header__inner">
+                <a href="tel:228" class="l-header__phone">(831) 202-02-12</a>
+                <a href="#popup" class="l-header__link js-fancybox">Заказать звонок</a>
+
             </div>
             <div class="m-menu-icon" data-show-sidebar>
                 <div class="m-menu-icon__lines"></div>
@@ -21,3 +22,5 @@
         </div>
     </div>
 </div>
+
+
