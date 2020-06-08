@@ -1,6 +1,7 @@
 .b-slider {
     display: flex;
     position: relative;
+
     &__sidebar {
         width: 110px;
         background-color: #fff;
@@ -24,7 +25,6 @@
     }
 
 
-
     .swiper-slide {
         background-size: cover;
         background-position: 50% 50%;
@@ -37,6 +37,7 @@
 
         &__content {
             max-width: 700px;
+
         }
 
         &__subtitle {
@@ -58,30 +59,33 @@
             margin-top: 50px;
         }
 
-        .l-content__inner {
-        }
+
     }
 
     &__nav {
         position: absolute;
         bottom: 65px;
-        right: 30px;
+        right: 45px;
         color: #fff;
         visibility: visible;
 
         white-space: nowrap;
+
         .swiper-pagination {
             position: relative;
             bottom: auto;
             line-height: 48px;
             font-size: 35px;
             padding: 0 10px;
+
             &-current {
                 font-size: 50px;
             }
+
             &-total {
             }
         }
+
         .swiper-nav {
             position: absolute;
             top: 0;
@@ -98,10 +102,12 @@
                 width: 30px;
                 visibility: visible;
             }
+
             &__next {
                 right: 100%;
+
                 &:before {
-                    content:'';
+                    content: '';
                     position: absolute;
                     left: 0;
                     width: 20px;
@@ -109,8 +115,9 @@
                     background-color: #fff;
                     top: 50%;
                 }
+
                 &:after {
-                    content:'';
+                    content: '';
                     position: absolute;
                     left: 0;
                     width: 2px;
@@ -121,10 +128,12 @@
                 }
 
             }
+
             &__prev {
                 left: 100%;
+
                 &:before {
-                    content:'';
+                    content: '';
                     position: absolute;
                     right: 0;
                     width: 20px;
@@ -138,25 +147,21 @@
 
     .swiper-nav {
         display: flex;
+
         &.-disabled {
             display: none;
         }
     }
 
-    .swiper-pagination {
-
-    }
-
-
-
     &__carousel {
         width: 100%;
+
         .l-content__inner {
-            transform: translateX(-130px);
             z-index: 1;
             position: relative;
         }
     }
+
     &__bottom {
         position: absolute;
         left: 0;
@@ -172,6 +177,7 @@
             bottom: 0;
             top: 0;
         }
+
         .b-social-menu {
             color: #fff;
             right: 15px;
@@ -191,5 +197,67 @@
             }
         }
 
+    }
+
+    @media all and (min-width: 1600px) {
+        &__carousel {
+            .l-content__inner {
+                transform: translateX(-130px);
+            }
+        }
+    }
+    @media all and (max-width: 980px) {
+        .swiper-slide__content {
+            max-width: 530px;
+        }
+    }
+    @media all and (max-width: 760px) {
+        &__sidebar {
+            display: none;
+        }
+        .b-social-menu {
+            display: none;
+        }
+        .swiper-slide {
+            text-align: center;
+            padding-left: 0;
+            padding-bottom: 70px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                background-color: rgba(0,0,0,.5);
+            }
+            &__title {
+                font-size: 20px;
+                line-height: 30px;
+            }
+            &__txt {
+                font-size: 14px;
+            }
+            &__subtitle {
+                font-size: 13px;
+            }
+            &__btn {
+                margin-top: 20px;
+            }
+        }
+        &__nav {
+            bottom: 25px;
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            .swiper-pagination {
+                font-size: 20px;
+                &-current {
+                    font-size: 28px;
+                }
+            }
+        }
     }
 }

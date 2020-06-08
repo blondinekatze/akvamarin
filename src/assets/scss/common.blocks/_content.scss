@@ -15,7 +15,9 @@
     @media all and (max-width: 1200px) {
         padding-top: 77px;
     }
-    @media all and (max-width: $width-tablet) {
-        padding-top: 70px;
+    @media all and (max-width: 760px) {
+        &__item {
+            margin-bottom: 60px;
+        }
     }
 }

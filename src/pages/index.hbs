@@ -4,7 +4,9 @@
             <div class="b-slider js-slider">
                 <div class="b-slider__sidebar">
                     <div class="b-slider__sidebar-txt">Нижний Новгород, ул. Петрова, д 23</div>
-                    {{> icon/icon name="arrow-down"}}
+                    <a href="#next" class="b-slider__icon js-scroll-to" >
+                        {{> icon/icon name="arrow-down"}}
+                    </a>
                 </div>
                 <div class="b-slider__carousel">
                     <div class="swiper-container" data-carousel>
@@ -22,7 +24,7 @@
                                                 на&nbsp;берегу Оки
                                             </div>
                                             <div class="swiper-slide__txt">
-                                                ЖК «Аквамарин» расположен на берегу Оки и досупен для каждого.<br/>>Мы
+                                                ЖК «Аквамарин» расположен на берегу Оки и досупен для каждого.<br/>Мы
                                                 поможем с выбором лучшего для Вас варианта<br/>
                                                 и проконсультируем по всем вопросам
                                             </div>
@@ -58,7 +60,7 @@
         </div>
 
         <div class="l-content__inner">
-            <div class="l-content__item">
+            <div class="l-content__item" id="next">
                 <div class="b-title">
                     <div class="b-title__wrap">
                         Выберите свою квартиру

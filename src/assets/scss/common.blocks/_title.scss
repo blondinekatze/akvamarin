@@ -12,22 +12,29 @@
         margin: 0;
     }
 
-    &__wrap {
-        display: inline-block;
-        position: relative;
-        &:after {
-            position: absolute;
-            bottom: 0;
-            content: '';
-            left: 0;
-            height: 3px;
-            width: 21px;
-            background-color: $color-main;
-        }
-    }
+
 
     @media all and (max-width: 980px) {
         font-size: 24px;
         line-height: 29px;
+        margin-bottom: 20px;
+
+    }
+    @media all and (min-width: 761px) {
+
+        &__wrap {
+            display: inline-block;
+            position: relative;
+            &:after {
+                position: absolute;
+                bottom: 0;
+                content: '';
+                left: 0;
+                height: 3px;
+                width: 21px;
+                background-color: $color-main;
+            }
+        }
+
     }
 }

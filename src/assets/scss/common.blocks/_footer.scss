@@ -23,16 +23,15 @@
     }
 
     &__inner {
-        width: 200px;
         font-size: 17px;
         line-height: 24px;
-        flex-shrink: 0;
         padding-top: 7px;
     }
 
     &__phone {
         display: block;
         font-weight: 700;
+        white-space: nowrap;
     }
 
     &__link {
@@ -40,12 +39,6 @@
         font-size: 13px;
     }
 
-    &__item {
-        &.-last {
-            width: 200px;
-            flex-shrink: 0;
-        }
-    }
 
     &__subtitle {
         font-weight: 700;
@@ -72,6 +65,107 @@
                 margin-top: 25px;
                 font-size: 14px;
             }
+        }
+    }
+
+    @media all and (max-width: 1280px) {
+        padding: 80px 0;
+        .b-menu {
+            &__link {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+        }
+    }
+    @media all and (min-width: 1101px) {
+
+        &__item {
+            &.-last {
+                width: 200px;
+                flex-shrink: 0;
+            }
+        }
+        &__inner {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+    }
+    @media all and (max-width: 1100px) {
+        &__txt {
+            font-size: 14px;
+        }
+        &__item {
+            margin-left: 20px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media all and (max-width: 980px) {
+        padding: 40px 0;
+
+    }
+    @media all and (max-width: 980px) and (min-width: 761px) {
+        &__top {
+            .l-footer {
+                &__wrap {
+                    flex-wrap: wrap;
+                }
+            }
+            .b-menu {
+                width: 100%;
+                order: 2;
+                margin-top: 10px;
+
+                &__item {
+                    width: 100%;
+                    text-align: center;
+                }
+                &__link {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    @media all and (max-width: 760px) {
+        text-align: center;
+        &__wrap {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__phone {
+            font-size: 14px;
+            &:before {
+                content:'';
+                display: inline-block;
+                margin-right: 5px;
+                @include sprite($svg-icons-phone--white);
+            }
+        }
+        &__item {
+            width: 100%;
+            margin-top: 15px;
+            margin-left: 0;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+        .b-menu {
+            width: 100%;
+            order: 2;
+            margin-top: 20px;
+            &__list {
+                flex-direction: column;
+            }
+        }
+        &__link {
+            display: none;
+        }
+        &__inner {
+            margin-top: 15px;
+            width: 100%;
         }
     }
 }

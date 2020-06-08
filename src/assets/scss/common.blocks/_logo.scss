@@ -16,4 +16,16 @@
         line-height: 19px;
         margin-left: 15px;
     }
+    @media all and (max-width: 500px) {
+        .b-logo {
+            &__img-wrap {
+                width: 40px;
+            }
+            &__txt {
+                font-size: 10px;
+                width: 90px;
+                margin-left: 10px;
+            }
+        }
+    }
 }
