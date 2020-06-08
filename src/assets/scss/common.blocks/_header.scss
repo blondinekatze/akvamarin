@@ -92,8 +92,12 @@
         }
         &__phone {
             font-size: 14px;
+            display: flex;
+            align-items: center;
             &:before {
                 content:'';
+                top: 2px;
+                position: relative;
                 display: inline-block;
                 margin-right: 5px;
                 @include sprite($svg-icons-phone);
